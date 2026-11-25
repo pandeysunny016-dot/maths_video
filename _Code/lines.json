@@ -1,0 +1,314 @@
+[
+  {
+    "id": "s01_01",
+    "scene": "s1",
+    "t": 0.0,
+    "dur": 5.28,
+    "end": 5.28,
+    "text": "Hello everyone! Have you ever wondered how a small change in one number can change another number?"
+  },
+  {
+    "id": "s01_02",
+    "scene": "s1",
+    "t": 5.73,
+    "dur": 6.04,
+    "end": 11.77,
+    "text": "For example, when we calculate the total price of a product, the total price depends on the quantity we buy."
+  },
+  {
+    "id": "s01_03",
+    "scene": "s1",
+    "t": 12.22,
+    "dur": 3.9,
+    "end": 16.12,
+    "text": "In mathematics, we can represent this relationship using something called a function."
+  },
+  {
+    "id": "s01_04",
+    "scene": "s1",
+    "t": 16.57,
+    "dur": 7.22,
+    "end": 23.79,
+    "text": "Today, we will understand what a single-variable function is, how it works, and how we can represent it using a graph."
+  },
+  {
+    "id": "s01_05",
+    "scene": "s1",
+    "t": 24.24,
+    "dur": 6.64,
+    "end": 30.88,
+    "text": "By the end of this video, you will be able to read any simple formula, build its table, and draw its graph with confidence."
+  },
+  {
+    "id": "s02_01",
+    "scene": "s2",
+    "t": 32.08,
+    "dur": 4.9,
+    "end": 36.98,
+    "text": "A function is a mathematical rule that takes an input and produces exactly one output."
+  },
+  {
+    "id": "s02_02",
+    "scene": "s2",
+    "t": 37.43,
+    "dur": 7.0,
+    "end": 44.43,
+    "text": "We usually represent a function using the notation f(x). Here, x is the input, and f(x) is the output."
+  },
+  {
+    "id": "s02_03",
+    "scene": "s2",
+    "t": 44.88,
+    "dur": 6.84,
+    "end": 51.72,
+    "text": "Let's take a simple function: f(x) = 2x + 1. This means we multiply the input by 2 and then add 1."
+  },
+  {
+    "id": "s02_04",
+    "scene": "s2",
+    "t": 52.17,
+    "dur": 7.74,
+    "end": 59.91,
+    "text": "For example, if the input is 1, the output is 3. If the input is 2, the output is 5. And if the input is 3, the output is 7."
+  },
+  {
+    "id": "s02_05",
+    "scene": "s2",
+    "t": 60.36,
+    "dur": 3.02,
+    "end": 63.38,
+    "text": "So, every input has a corresponding output."
+  },
+  {
+    "id": "s02_06",
+    "scene": "s2",
+    "t": 63.83,
+    "dur": 7.26,
+    "end": 71.09,
+    "text": "Think of it like a reliable vending machine: pressing the same button always gives you the exact same item, never two different things at once."
+  },
+  {
+    "id": "s03_01",
+    "scene": "s3",
+    "t": 72.29,
+    "dur": 5.46,
+    "end": 77.75,
+    "text": "Now let's understand how we can represent this function using a graph. A graph has two important axes."
+  },
+  {
+    "id": "s03_02",
+    "scene": "s3",
+    "t": 78.2,
+    "dur": 8.36,
+    "end": 86.56,
+    "text": "The horizontal axis is called the x-axis, and it represents the input. The vertical axis is called the y-axis, and it represents the output."
+  },
+  {
+    "id": "s03_03",
+    "scene": "s3",
+    "t": 87.01,
+    "dur": 7.24,
+    "end": 94.25,
+    "text": "For our function, y = 2x + 1. When x is 1, y is 3. So we plot the point (1, 3)."
+  },
+  {
+    "id": "s03_04",
+    "scene": "s3",
+    "t": 94.7,
+    "dur": 7.24,
+    "end": 101.94,
+    "text": "When x is 2, y is 5. So we plot the point (2, 5). When x is 3, y is 7. So we plot the point (3, 7)."
+  },
+  {
+    "id": "s03_05",
+    "scene": "s3",
+    "t": 102.39,
+    "dur": 4.68,
+    "end": 107.07,
+    "text": "When we connect these points, we get a straight line. This line represents our function."
+  },
+  {
+    "id": "s03_06",
+    "scene": "s3",
+    "t": 107.52,
+    "dur": 5.22,
+    "end": 112.74,
+    "text": "Every single point sitting on that line is a valid input and output pair for our equation."
+  },
+  {
+    "id": "s04_01",
+    "scene": "s4",
+    "t": 113.94,
+    "dur": 8.12,
+    "end": 122.06,
+    "text": "Let's solve one example step by step. Our function is f(x) = 2x + 1. We will calculate the output for different values of x."
+  },
+  {
+    "id": "s04_02",
+    "scene": "s4",
+    "t": 122.51,
+    "dur": 5.64,
+    "end": 128.15,
+    "text": "First, when x = 0: f(0) = 2 \u00d7 0 + 1. The answer is 1."
+  },
+  {
+    "id": "s04_03",
+    "scene": "s4",
+    "t": 128.6,
+    "dur": 4.94,
+    "end": 133.54,
+    "text": "Next, when x = 1: f(1) = 2 \u00d7 1 + 1. The answer is 3."
+  },
+  {
+    "id": "s04_04",
+    "scene": "s4",
+    "t": 133.99,
+    "dur": 5.08,
+    "end": 139.07,
+    "text": "When x = 2, the answer is 5. And when x = 3, the answer is 7."
+  },
+  {
+    "id": "s04_04b",
+    "scene": "s4",
+    "t": 139.52,
+    "dur": 7.6,
+    "end": 147.12,
+    "text": "Let's double check that: 2 \u00d7 2 = 4, plus 1 is 5. And 2 \u00d7 3 = 6, plus 1 gives 7."
+  },
+  {
+    "id": "s04_05",
+    "scene": "s4",
+    "t": 147.57,
+    "dur": 9.16,
+    "end": 156.73,
+    "text": "We can write these values in a table: Input 0 gives output 1. Input 1 gives output 3. Input 2 gives output 5. Input 3 gives output 7."
+  },
+  {
+    "id": "s04_06",
+    "scene": "s4",
+    "t": 157.18,
+    "dur": 6.32,
+    "end": 163.5,
+    "text": "Now, we plot these points on the coordinate plane. As the input increases by 1, the output increases by 2."
+  },
+  {
+    "id": "s04_07",
+    "scene": "s4",
+    "t": 163.95,
+    "dur": 4.1,
+    "end": 168.05,
+    "text": "This is why our graph forms a straight line that rises from left to right."
+  },
+  {
+    "id": "s04_08",
+    "scene": "s4",
+    "t": 168.5,
+    "dur": 6.18,
+    "end": 174.68,
+    "text": "In mathematics, this steady step of rising 2 units for every 1 unit across is called the slope of the line."
+  },
+  {
+    "id": "s05_01",
+    "scene": "s5",
+    "t": 175.88,
+    "dur": 5.72,
+    "end": 181.6,
+    "text": "Now let's connect this mathematical concept to real life. Imagine that one notebook costs 20 rupees."
+  },
+  {
+    "id": "s05_02",
+    "scene": "s5",
+    "t": 182.05,
+    "dur": 4.48,
+    "end": 186.53,
+    "text": "If we buy x notebooks, the total cost will be: C(x) = 20x."
+  },
+  {
+    "id": "s05_03",
+    "scene": "s5",
+    "t": 186.98,
+    "dur": 8.5,
+    "end": 195.48,
+    "text": "If we buy one notebook, the cost is 20 rupees. If we buy two notebooks, the cost is 40 rupees. If we buy three notebooks, the cost is 60 rupees."
+  },
+  {
+    "id": "s05_03b",
+    "scene": "s5",
+    "t": 195.93,
+    "dur": 6.3,
+    "end": 202.23,
+    "text": "And if you buy 0 notebooks, the total cost is 0 rupees, which is why this line starts right at the origin."
+  },
+  {
+    "id": "s05_04",
+    "scene": "s5",
+    "t": 202.68,
+    "dur": 8.32,
+    "end": 211.0,
+    "text": "Here, the number of notebooks is the input, and the total cost is the output. As the number of notebooks increases, the total cost also increases."
+  },
+  {
+    "id": "s05_05",
+    "scene": "s5",
+    "t": 211.45,
+    "dur": 6.22,
+    "end": 217.67,
+    "text": "We can represent this relationship using a graph. This shows us that functions are not just mathematical formulas."
+  },
+  {
+    "id": "s05_06",
+    "scene": "s5",
+    "t": 218.12,
+    "dur": 4.6,
+    "end": 222.72,
+    "text": "They are useful for representing relationships between different quantities in our everyday life."
+  },
+  {
+    "id": "s06_01",
+    "scene": "s6",
+    "t": 223.92,
+    "dur": 5.92,
+    "end": 229.84,
+    "text": "Let's quickly summarize what we learned today. First, a function takes an input and produces exactly one output."
+  },
+  {
+    "id": "s06_02",
+    "scene": "s6",
+    "t": 230.29,
+    "dur": 6.0,
+    "end": 236.29,
+    "text": "Second, we can represent a function using a mathematical formula, a table, or a graph."
+  },
+  {
+    "id": "s06_03",
+    "scene": "s6",
+    "t": 236.74,
+    "dur": 4.52,
+    "end": 241.26,
+    "text": "Third, a graph helps us understand how the output changes when the input changes."
+  },
+  {
+    "id": "s06_04",
+    "scene": "s6",
+    "t": 241.71,
+    "dur": 7.08,
+    "end": 248.79,
+    "text": "Finally, functions are useful in real-life situations, such as calculating prices, distance, time, and many other quantities."
+  },
+  {
+    "id": "s06_04b",
+    "scene": "s6",
+    "t": 249.24,
+    "dur": 6.4,
+    "end": 255.64,
+    "text": "Whether you are tracking a car's speed or budgeting your monthly expenses, graphs turn abstract numbers into a clear visual story."
+  },
+  {
+    "id": "s06_05",
+    "scene": "s6",
+    "t": 256.09,
+    "dur": 6.96,
+    "end": 263.05,
+    "text": "I hope this animation helped you understand single-variable functions and graphs in a simple and visual way. Thank you for watching!"
+  }
+]
