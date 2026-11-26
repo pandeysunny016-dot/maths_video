@@ -1,11 +1,21 @@
 import os
+import shutil
 import subprocess
 import tempfile
-import cv2
-import numpy as np
+from PIL import Image
 
-OUT_DIR = "/Users/abhimanraj/MATHS-VIDEO/eigen-film/lemo-opuscar/films/functions-sunny/assets/tex"
+OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "tex")
 os.makedirs(OUT_DIR, exist_ok=True)
+
+def find_bin(name: str, fallback: str) -> str:
+    """Resolve binary from PATH or fallback location, raising a clear error if missing."""
+    path = shutil.which(name) or (fallback if os.path.isfile(fallback) else None)
+    if not path:
+        raise FileNotFoundError(
+            f"Required binary '{name}' not found in PATH or '{fallback}'. "
+            "Install MacTeX/BasicTeX (pdflatex) and poppler (pdftoppm) to render LaTeX."
+        )
+    return path
 
 # Light-theme ink (#1C2127) and Royal Blue (#1D4ED8) LaTeX formulas
 INK = (0x1C, 0x21, 0x27)
@@ -32,6 +42,9 @@ TEX_TEMPLATE = r"""\documentclass[border=4pt]{standalone}
 \end{document}
 """
 
+PDFLATEX = find_bin("pdflatex", "/Library/TeX/texbin/pdflatex")
+PDFTOPPM = find_bin("pdftoppm", "/opt/homebrew/bin/pdftoppm")
+
 with tempfile.TemporaryDirectory() as tmp:
     env = os.environ.copy()
     env["TEXMFVAR"] = "/tmp/texmf-var"
@@ -44,23 +57,24 @@ with tempfile.TemporaryDirectory() as tmp:
             f.write(TEX_TEMPLATE % expr)
 
         subprocess.run(
-            ["/Library/TeX/texbin/pdflatex", "-interaction=nonstopmode", "-output-directory", tmp, tex_path],
+            [PDFLATEX, "-interaction=nonstopmode", "-output-directory", tmp, tex_path],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=env
         )
         subprocess.run(
-            ["/opt/homebrew/bin/pdftoppm", "-png", "-r", "450", "-singlefile", pdf_path, png_prefix],
+            [PDFTOPPM, "-png", "-r", "450", "-singlefile", pdf_path, png_prefix],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
 
-        raw = cv2.imread(png_prefix + ".png", cv2.IMREAD_GRAYSCALE)
-        alpha = 255 - raw
-        h, w = alpha.shape
-        rgba = np.zeros((h, w, 4), dtype=np.uint8)
-        rgba[:, :, 0] = rgb[2]
-        rgba[:, :, 1] = rgb[1]
-        rgba[:, :, 2] = rgb[0]
-        rgba[:, :, 3] = alpha
+        gray = Image.open(png_prefix + ".png").convert("L")
+        alpha = gray.point(lambda p: 255 - p)
+        w, h = gray.size
+        rgba = Image.merge("RGBA", (
+            Image.new("L", (w, h), rgb[0]),
+            Image.new("L", (w, h), rgb[1]),
+            Image.new("L", (w, h), rgb[2]),
+            alpha,
+        ))
 
         out_png = os.path.join(OUT_DIR, f"{name}.png")
-        cv2.imwrite(out_png, rgba)
+        rgba.save(out_png)
         print(f"Compiled Light-Theme LaTeX {name}: {w}x{h}")
